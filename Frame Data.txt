@@ -1,0 +1,119 @@
+Standing
+x	- i4 , r10, +6h , +4g
+f.y	- i6 , r24, +2h , +0g
+y	- i4 , r26, +4h , +0g
+f.a	- i5 , r12, +5h , +3g
+a	- i5 , r14, +5h , +1g, Low
+f.b	- i10, r22, +2h , +0g, KD vs air
+b	- i4 , r18, +4h , +2g
+
+Command
+f+x	- i10, r18, +5h , +1g, Overhead
+~f+x	- i8 , r18, +2h , -1g
+f+a	- i8 , r18, +3h , -1g, Cannot be cancelled into
+
+Crouching
+x	- i4 , r12, +6h , +2g
+y	- i6 , r22, +3h , +0g
+a	- i5 , r12, +5h , +2g
+b	- i8 , r18, Trip, -4g
+
+Air
+n.x	- i4 , ---, +2h , +0g, Not Exact
+x	- i4 , ---, +2h , +0g, Not Exact
+n.y	- i6 , ---, +4h , +0g, Not Exact
+y	- i6 , ---, +4h , +0g, Not Exact
+a	- i6 , ---, +2h , +0g, Not Exact
+n.b	- i8 , ---, +4h , +0g, Not Exact
+b	- i6 , ---, +4h , +0g, Not Exact
+
+Special - Striker
+D,F,x	- i8 , r24, KD  , -2g , UpperBody invincible
+D,F,y	- i8 , r28, KD  , -6g , UpperBody invincible
+
+D,F,a,p	- i12, r26, +2h , -2g , Projectile immune f8-16
+D,F,b,p	- i16, r26, +2h , -2g , Projectile immune f12-24
+D,F,a,k	- i14, r26, KD  , -6g , Projectile immune f8-16
+D,F,b,k	- i18, r26, KD  , -6g , Projectile immune f12-24
+
+F,D,B,a - i6 , r10, KD  , --- , Reversal, 18 Active frames
+F,D,B,b - i6 , r10, KD  , --- , Reversal, 24 Active frames
+
+a.D,D,x	- -- , r44, KD  , -2g
+a.D,D,y	- -- , r44, KD  , -2g
+
+D,B,x	- i8 , r26, +2h , +0g
+D,B,y	- i12, r26, +2h , +0g
+-D,B,p	- i10, r23, +0h , -4g
+ -D,B,p	- i10, r28, KD  , -8g
+
+Super - Striker
+2*D,F,k	- i6 , r34, KD  , -16g, Invincible While Travelling
+2*D,F,p	- i6 , r38, KD  , -14g, Startup Invincible
+2*D,F,xy- i6 , r38, KD  , -14g, Startup Invincible
+2*D,F,ab- i10, r36, KD  , -2g , Startup Invincible
+
+Special - Grappler
+B,D,F,x - i6 , r28, KD  , --- , Command throw
+B,D,F,y - i6 , r28, KD  , --- , Command throw
+
+D,F,a,p	- i14, r20, KD  , --- , Command throw, Projectile immune f8-16
+D,F,b,p	- i18, r20, KD  , --- , Command throw, Projectile immune f12-24
+
+DP,x	- i8 , r9 , +8h , --- , Reversal, 12 Active frames
+DP,y	- i8 , r30, +0h , -10g, Startup invincible
+
+D,B,x	- i10, r22, KD  , -6g , Attack throw on successful hit
+D,B,y	- i14, r22, KD  , -6g , Attack throw on successful hit
+
+Super - Grappler
+D,B~F,p - i4 , r20, KD , --- , Command throw, Startup Invincible
+a.2D,F,k- i14, ---, KD , --- , Only hits air-to-air
+a2D,F,ab- i14, ---, KD , --- , Only hits air-to-air
+D,B~F,xy- i0 , r30, KD , --- , Command throw, Instant, Hits air for Final Cancel
+
+Special - Street Fighter
+D,F,x	- i22, r20, --- , --- , Gets rock
+-D,F,p	- i6 , r12, +10h, +2g , Throws rock, Projectile
+D,F,y 	- i26, r12, +10h, +2g , Projectile
+
+a.D,F,a	- i10, ---, +6h , -4g , Not Exact
+a.D,F,b	- i10, ---, +6h , -4g , Not Exact
+
+F,D,B,x - i8 , r8 , KD  , -6g , Carries to the edge of screen
+F,D,B,y - i12, r8 , KD  , -6g , Carries to the edge of screen
+
+DP,x	- i20, r20, -2h , +4g , Unblockable followup when guarded
+DP,y	- i22, r20, -2h , +4g , Unblockable followup when guarded
+
+D,F,a	- i12, r18, +0h , +2g
+D,F,b	- i16, r18, +0h , +2g
+
+Super - Street Fighter
+2*D,F,p	- i16, r42, +80h, -10g, Projectile, Projectile immune, Doesn't fully animate on whiff
+2*D,F,k	- i12, r40, KD  , -10g, No PlayerPush during dash
+2*D,F,ab- i12, r32, KD  , -8g , No PlayerPush during dash
+2*D,F,xy- i10, r26, KD  , -8g , Sorry
+
+Special - Nenmaster
+D,F,x	- i14, r28, +2h , +0g , Projectile, Chargeable
+D,F,y	- i14, r28, +2h , +0g , Projectile, Chargeable
+Charge	- i36, r28, KD  , +4g , Projectile
+FullCh.	- i76, r28, KD  , +10g, Projectile
+
+DP,x	- i6 , ---, KD  , Death on block, Startup invincible
+DP,y	- i6 , ---, KD  , Death on block, Startup invincible
+
+D,B,a	- i10, r18, KD  , -12g
+D,B,b	- i10, r18, KD  , -12g
+a.D,B,a	- i10, r18, KD  , -12g, Not Exact
+a.D,B,b	- i10, r18, KD  , -12g, Not Exact
+
+D,F,x	- i8 , r24, KD	, -6g , Projectile Reflector, 20 Active Frames
+D,F,y	- i8 , r24, KD	, -6g , Projectile Reflector, 30 Active Frames
+
+Super - Nenmaster
+2*D,F,p - i10, r64, KD  , -8g , Projectile Ball
+2*D,B,p - i14, r22, KD  , -4g , Projectile Pillar, Button determines distance
+2*D,B,xy- i14, r58, KD  , -8g , Projectile Pillar at opponent's location
+2*D,F,xy- i8 , r52, KD  , -6g , Projectile
